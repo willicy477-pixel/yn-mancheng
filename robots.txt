@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# 方便各类 AI 与搜索引擎读取公司信息
+Allow: /llms.txt
+Allow: /llms-full.txt
