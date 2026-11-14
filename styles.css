@@ -243,8 +243,14 @@ section h2 {
 }
 .site-footer p { margin: 0 0 6px; }
 
+.nav-toggle { display: none; }
 @media (max-width: 860px) {
-  .nav { display: none; }
+  .header-inner { flex-wrap: wrap; gap: 12px; }
+  .nav-toggle { display: inline-flex; flex-direction: column; justify-content: center; gap: 5px; width: 42px; height: 42px; padding: 0 10px; border: 1px solid var(--line); border-radius: 10px; background: white; cursor: pointer; margin-left: auto; }
+  .nav-toggle span { display: block; height: 2px; background: var(--navy); border-radius: 2px; }
+  .nav { display: none; order: 3; width: 100%; flex-direction: column; gap: 0; padding: 4px 0 12px; }
+  .nav.open { display: flex; }
+  .nav a { padding: 12px 4px; border-top: 1px solid var(--line); font-size: 16px; }
   .metrics, .points, .about-grid, .contact-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -263,3 +269,4 @@ section h2 {
 .case figcaption { margin-top:12px; font-size:14px; color:var(--muted); line-height:1.6; }
 .case figcaption b { color:var(--navy); font-size:15px; }
 @media (max-width:860px){ .cases{grid-template-columns:1fr;} }
+@media (max-width:560px){ .header-inner .phone-btn{ padding:8px 12px; font-size:14px; } }
